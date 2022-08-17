@@ -6,7 +6,9 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -83,6 +85,12 @@ class DatabaseSeeder extends Seeder
             'name' => 'Synthetic Grass',
             'price' => 275000,
             'description' => 'Synthetic grass to green up your terrace'
+        ]);
+
+        User::create([
+            'name' => 'Makima',
+            'email' => 'makima@mail.com',
+            'password' => Hash::make('makima123')
         ]);
     }
 }
